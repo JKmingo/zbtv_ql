@@ -8,6 +8,7 @@ new Env('IPTV组播源');
 import os
 import subprocess
 import time
+import shutil
 
 
 if __name__ == '__main__':
