@@ -17,4 +17,4 @@ if __name__ == '__main__':
         subprocess.run(["git", "pull"])
 
     os.chdir(repo_dir)
-    exec(open(os.path.join(repo_dir, "main.py")).read())
+    exec(open(os.path.join(os.getcwd(), repo_dir, "main.py")).read())
