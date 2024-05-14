@@ -25,6 +25,9 @@ if __name__ == '__main__':
         file_path = os.path.join(repo_path, file)
         if os.path.isdir(file_path):
             continue
+        if os.path.exists(os.path.join(base_path, os.path.basename(file_path))):
+            # 如果存在，先删除同名文件
+            os.remove(os.path.join(base_path, os.path.basename(file_path)))
         shutil.move(file_path, base_path, overwrite=True)
     shutil.rmtree(repo_path)
     exec(open("main.py").read())
