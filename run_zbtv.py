@@ -27,5 +27,5 @@ if __name__ == '__main__':
             continue
         shutil.move(file_path, base_path)
     shutil.rmtree(repo_path)
-    exec(open(os.path.join(repo_path, "main.py")).read())
+    exec(open("main.py").read())
     
