@@ -25,7 +25,7 @@ if __name__ == '__main__':
         file_path = os.path.join(repo_path, file)
         if os.path.isdir(file_path):
             continue
-        shutil.move(file_path, base_path)
+        shutil.move(file_path, base_path, overwrite=True)
     shutil.rmtree(repo_path)
     exec(open("main.py").read())
     
