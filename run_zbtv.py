@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*
 '''
 定时自定义
-0 5 * * * main.py
+0 0 5 * * * run_zbtv.py
 new Env('IPTV组播源');
 '''
 
