@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*
+'''
+定时自定义
+0 5 * * * main.py
+new Env('IPTV组播源');
+'''
+
 import os
 import subprocess
 
