@@ -16,7 +16,7 @@ if __name__ == '__main__':
     base_path = os.getcwd()
     repo_dir = "ZBTV"
     repo_path = os.path.join(base_path, repo_dir)
-    subprocess.run(["git", "clone", repo_url])
+    subprocess.run(["git", "clone", repo_url, repo_dir])
     subprocess.run(["mv", f"{repo_path}/*", "."])
     subprocess.run(["rm", "-rf", repo_path])
     exec(open(os.path.join(repo_path, "main.py")).read())
