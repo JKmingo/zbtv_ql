@@ -7,6 +7,7 @@ new Env('IPTV组播源');
 
 import os
 import subprocess
+import time
 
 
 if __name__ == '__main__':
@@ -17,6 +18,13 @@ if __name__ == '__main__':
     repo_dir = "ZBTV"
     repo_path = os.path.join(base_path, repo_dir)
     subprocess.run(["git", "clone", repo_url, repo_dir])
-    subprocess.run(["mv", f"{repo_path}/*", "."])
-    subprocess.run(["rm", "-rf", repo_path])
+    time.sleep(2)
+    all_files = os.listdir(repo_path)
+    for file in all_files:
+        file_path = os.path.join(repo_path, file)
+        if os.path.isdir(file_path):
+            continue
+        shutil.move(file_path, base_path)
+    shutil.rmtree(repo_path)
     exec(open(os.path.join(repo_path, "main.py")).read())
+    
