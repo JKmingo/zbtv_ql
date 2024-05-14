@@ -14,6 +14,6 @@ if __name__ == '__main__':
     repo_url = "https://github.com/JKmingo/ZBTV.git"
     # 本地仓库目录
     base_path = os.getcwd()
-    subprocess.run(["git", "clone", base_path])
+    subprocess.run(["git", "clone", repo_url, base_path])
     exec(open("main.py").read())
     
