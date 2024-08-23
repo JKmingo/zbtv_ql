@@ -13,7 +13,7 @@ import shutil
 
 if __name__ == '__main__':
     # Git 仓库地址
-    repo_url = "https://github.com/JKmingo/ZBTV.git"
+    repo_url = "https://github.com/JKmingo/ZBTV_Plus.git"
     # 本地仓库目录
     base_path = os.getcwd()
     repo_dir = "ZBTV"
